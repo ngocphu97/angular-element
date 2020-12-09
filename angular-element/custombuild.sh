@@ -1,0 +1,2 @@
+#!/bin/sh
+ng build --prod --single-bundle --output-hashing=none --vendor-chunk=false && cat dist/child/polyfills.js dist/child/scripts.js dist/child/main.js dist/child/3.js dist/child/4.js > dist/child/js/sdk.js

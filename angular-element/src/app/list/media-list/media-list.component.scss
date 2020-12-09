@@ -1,0 +1,17 @@
+.rounded-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.action-infor {
+  font-size: 0.75rem !important;
+}
+
+.media {
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  }
+}
+

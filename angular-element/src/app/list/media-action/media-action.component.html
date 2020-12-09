@@ -1,0 +1,85 @@
+<div class="m-3 container">
+
+  <div>
+    <h3>Element</h3>
+    <p>
+      Copy-paste the element code into wherever you want to place it.
+    </p>
+    <code class="bg-light p-3">
+      &lt;micro-media-list id="media" data-mainColor="{{ mainColor }}"
+      data-secondaryColor="{{ secondaryColor }}"&gt;&lt;/micro-media-list&gt;
+    </code>
+  </div>
+
+  <div class="mt-3">
+    <h3>CSS</h3>
+    <p>
+      Copy-paste the stylesheet into your <code>&lt;head&gt;</code> after other stylesheets to load our CSS.
+    </p>
+    <code class="bg-light p-3">
+      &lt;link rel="stylesheet" href="https://element-demo.web.app/css/styles.css"&gt;&lt;/link&gt;
+    </code>
+  </div>
+
+  <div class="mt-3">
+    <h3>JavaScript</h3>
+    <p>
+      Copy-paste the JavaScript into your <code>&lt;body&gt;</code> before closing to load our JS.
+    </p>
+
+    <div class="bg-light p-3" style="width: fit-content;">
+      <code>
+        &lt;script src="https://element-demo.web.app/js/polyfills.js"&gt;&lt;/script&gt;
+      </code>
+
+      <br>
+
+      <code>
+        &lt;script src="https://element-demo.web.app/js/main.js"&gt;&lt;/script&gt;
+      </code>
+
+      <br>
+
+      <code>
+        &lt;script src="https://element-demo.web.app/js/4.js"&gt;&lt;/script&gt;
+      </code>
+
+      <br>
+
+      <code>
+        &lt;script src="https://element-demo.web.app/js/3.js"&gt;&lt;/script&gt;
+      </code>
+    </div>
+  </div>
+
+  <div class="mt-3">
+
+    <h3>Setup your personal design</h3>
+
+    <div class="mt-3">
+      <h4>Main button color</h4>
+
+      <button class="btn me-2 btn-primary" (click)="setupMainColor('primary')">Click</button>
+      <button class="btn me-2 btn-secondary" (click)="setupMainColor('secondary')">Click</button>
+      <button class="btn me-2 btn-success" (click)="setupMainColor('success')">Click</button>
+      <button class="btn me-2 btn-danger" (click)="setupMainColor('danger')">Click</button>
+      <button class="btn me-2 btn-warning" (click)="setupMainColor('warning')">Click</button>
+      <button class="btn me-2 btn-info" (click)="setupMainColor('info')">Click</button>
+    </div>
+
+    <div class="mt-3">
+      <h4>Secondary button color</h4>
+
+      <button class="btn me-2 btn-primary" (click)="setupSecondaryColor('primary')">Click</button>
+      <button class="btn me-2 btn-secondary" (click)="setupSecondaryColor('secondary')">Click</button>
+      <button class="btn me-2 btn-success" (click)="setupSecondaryColor('success')">Click</button>
+      <button class="btn me-2 btn-danger" (click)="setupSecondaryColor('danger')">Click</button>
+      <button class="btn me-2 btn-warning" (click)="setupSecondaryColor('warning')">Click</button>
+      <button class="btn me-2 btn-info" (click)="setupSecondaryColor('info')">Click</button>
+    </div>
+
+  </div>
+
+  <h3 class="mt-4">Your element</h3>
+
+</div>
