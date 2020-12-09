@@ -81,4 +81,11 @@ export class PricingState {
       })
     );
   }
+
+  @Action(Price.UpdateListWithConfig)
+  updateListFromConfig(context: StateContext<PriceStateModel>, action: Price.UpdateListWithConfig) {
+    context.patchState({
+      pricingList: action.list
+    });
+  }
 }

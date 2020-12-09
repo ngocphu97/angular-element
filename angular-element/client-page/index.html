@@ -11,15 +11,32 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
   <title>Client page</title>
+</head>
+
+<body onload="onClientPageLoad()">
+
+  <main class="container">
+    <micro-pricing id="microPricing"></micro-pricing>
+  </main>
+
+
+  <script src="./assets/js/polyfills.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/3.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
+    function onClientPageLoad() {
       const config = {
         mainColor: 'purple',
         secondaryColor: 'blue',
         pricing: [{
-            name: 'Standard',
-            value: 0,
+            id: 1,
+            title: 'Standard',
+            itemPrice: 0,
             detail: [
               "5 users included",
               "1 GB of storage",
@@ -28,8 +45,9 @@
             ]
           },
           {
-            name: 'Professional',
-            value: 20,
+            id: 2,
+            title: 'Professional',
+            itemPrice: 20,
             detail: [
               "15 users included",
               "20 GB of storage",
@@ -38,8 +56,9 @@
             ]
           },
           {
-            name: 'Premium',
-            value: 50,
+            id: 3,
+            title: 'Premium',
+            itemPrice: 50,
             detail: [
               "50 users included",
               "100 GB of storage",
@@ -51,30 +70,12 @@
       }
 
       const jsonParse = JSON.stringify(config);
-    });
+
+      document.getElementById('microPricing').setAttribute('config-data', jsonParse)
+    };
 
   </script>
 
-</head>
-
-<body>
-
-
-  <main class="container">
-
-
-    <micro-pricing></micro-pricing>
-
-  </main>
-
-
-  <script src="./assets/js/polyfills.js" defer></script>
-  <script src="./assets/js/main.js" defer></script>
-  <script src="./assets/js/3.js" defer></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-  </script>
   <!-- <script src="./client-page/assets/js/4.js"></script> -->
 
 

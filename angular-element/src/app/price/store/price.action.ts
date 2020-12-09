@@ -12,4 +12,9 @@ export namespace Price {
     static readonly type = '[List Page] Get Pricing Detail';
     constructor(public id: any) { }
   }
+
+  export class UpdateListWithConfig {
+    static readonly type = '[List Page] Update List With Config From Client';
+    constructor(public list: any) { }
+  }
 }
