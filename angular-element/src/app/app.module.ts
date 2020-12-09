@@ -14,15 +14,23 @@ import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { MediaListComponent } from './list/media-list/media-list.component';
 import { ListState } from './list/store/list.state';
+import { LayoutComponent } from './layout/layout.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { PriceListComponent } from './price/containers/price-list/price-list.component';
+import { PriceElementComponent } from './price/price-element/price-element.component';
+import { Router } from '@angular/router';
 
 
 // set false when build
 const local = false;
-// const local = false;
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +49,12 @@ const local = false;
 })
 export class AppModule {
 
-  constructor(private injector: Injector) {
-    const mediaList = createCustomElement(MediaListComponent, { injector: this.injector })
-    customElements.define('micro-media-list', mediaList);
+  constructor(private injector: Injector, private router: Router) {
+
+    const pricing = createCustomElement(PriceElementComponent, { injector: this.injector })
+    customElements.define('micro-pricing', pricing);
+
+    this.router.navigateByUrl('', { skipLocationChange: true });
   }
 
   ngDoBootstrap(_appRef: ApplicationRef): void { }

@@ -1,0 +1,20 @@
+<div class="col">
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 fw-normal">{{ priceItem.title }}</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">${{priceItem.itemPrice}} <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li *ngFor="let action of priceItem.detail"> {{ action }} </li>
+      </ul>
+      <button class="btn btn-primary my-3" (click)="seeMoreDetail(priceItem)">See more</button>
+      <a type="button" class="w-100 btn btn-lg"   
+        [routerLink]="['/price', { outlets : {price: ['checkout']} }]" 
+        skipLocationChange
+        [ngClass]="priceItem.action === 'Sign up for free' ? 'btn-outline-primary' : 'btn-primary'">
+        {{ priceItem.action }}
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="./client-page/assets/css/style.css"></script> -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Client page</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      const config = {
+        mainColor: 'purple',
+        secondaryColor: 'blue',
+        pricing: [{
+            name: 'Standard',
+            value: 0,
+            detail: [
+              "5 users included",
+              "1 GB of storage",
+              "Email support",
+              "Help center access"
+            ]
+          },
+          {
+            name: 'Professional',
+            value: 20,
+            detail: [
+              "15 users included",
+              "20 GB of storage",
+              "Email support",
+              "Help center access"
+            ]
+          },
+          {
+            name: 'Premium',
+            value: 50,
+            detail: [
+              "50 users included",
+              "100 GB of storage",
+              "Email support",
+              "Help center access"
+            ]
+          }
+        ]
+      }
+
+      const jsonParse = JSON.stringify(config);
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+
+  <main class="container">
+
+
+    <micro-pricing></micro-pricing>
+
+  </main>
+
+
+  <script src="./assets/js/polyfills.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/3.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <!-- <script src="./client-page/assets/js/4.js"></script> -->
+
+
+
+</body>
+
+</html>

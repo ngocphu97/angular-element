@@ -5,18 +5,9 @@
   <meta charset="utf-8">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Demo Angular element app</title>
 
-<!-- 
-  <script src="https://element-demo.web.app/js/polyfills.js" defer></script>
-  <script src="https://element-demo.web.app/js/main.js" defer></script>
-  <script src="https://element-demo.web.app/js/4.js" defer></script>
-  <script src="https://element-demo.web.app/js/3.js" defer></script>
-
-  <link rel="stylesheet" href="https://element-demo.web.app/css/styles.css"> -->
-
-
-  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
   <style media="screen">
     body {
@@ -92,102 +83,15 @@
     }
 
   </style>
+  
 </head>
 
 <body>
 
-  <!-- <div class="m-3 container">
-
-    <div class="mt-3">
-      <h3>CSS</h3>
-      <p>
-        Copy-paste the stylesheet into your <code>&lt;head&gt;</code> after other stylesheets to load our CSS.
-      </p>
-      <code class="bg-light p-3">
-        &lt;link rel="stylesheet" href="https://element-demo.web.app/css/styles.css"&gt;&lt;/link&gt;
-      </code>
-    </div>
-
-    <div class="mt-3">
-      <h3>JavaScript</h3>
-      <p>
-        Copy-paste the JavaScript into your <code>&lt;body&gt;</code> before closing to load our JS.
-      </p>
-
-      <div class="bg-light p-3" style="width: fit-content;">
-
-        <code>
-          &lt;script src="https://element-demo.web.app/sdk.js"&gt;&lt;/script&gt;
-        </code>
-      </div>
-    </div>
-
-    <div class="mt-3">
-      <h3>Element</h3>
-      <p>
-        Copy-paste the element code into wherever you want to place it.
-      </p>
-      <code class="bg-light p-3">
-        &lt;micro-media-list id="media" main-color="<span id="mainColor">primary</span>" secondary-color="<span
-          id="secondaryColor">primary</span>"&gt;&lt;/micro-media-list&gt;
-      </code>
-    </div>
-
-    <div class="mt-3">
-      <h3>Setup your personal design</h3>
-
-      <div class="mt-3">
-        <h4>Main button color</h4>
-
-        <button type="button" class="btn btn-primary me-2" onClick="setupMainColor('primary')"></button>
-        <button type="button" class="btn btn-secondary me-2" onClick="setupMainColor('secondary')"></button>
-        <button type="button" class="btn btn-success me-2" onClick="setupMainColor('success')"></button>
-        <button type="button" class="btn btn-danger me-2" onClick="setupMainColor('danger')"></button>
-        <button type="button" class="btn btn-warning me-2" onClick="setupMainColor('warning')"></button>
-        <button type="button" class="btn btn-info me-2" onClick="setupMainColor('info')"></button>
-      </div>
-
-      <div class="mt-3">
-        <h4>Secondary button color</h4>
-
-        <button type="button" class="btn btn-primary me-2 "
-          onClick="setupSecondaryColor('primary')"></button>
-        <button type="button" class="btn btn-secondary me-2 "
-          onClick="setupSecondaryColor('secondary')"></button>
-        <button type="button" class="btn btn-success me-2 "
-          onClick="setupSecondaryColor('success')"></button>
-        <button type="button" class="btn btn-danger me-2 " onClick="setupSecondaryColor('danger')"></button>
-        <button type="button" class="btn btn-warning me-2 "
-          onClick="setupSecondaryColor('warning')"></button>
-        <button type="button" class="btn btn-info me-2 " onClick="setupSecondaryColor('info')"></button>
-      </div>
-    </div>
-
-    <div class="mt-3">
-
-      <micro-media-list id="media" main-color="primary" secondary-color="primary">
-      </micro-media-list>
-
-    </div>
-
-  </div>
-
-
-  <script>
-    function setupMainColor(color) {
-      document.getElementById('media').setAttribute('secondary-color', color);
-      document.getElementById('mainColor').innerHTML = color;
-    }
-
-    function setupSecondaryColor(color) {
-      document.getElementById('media').setAttribute('main-color', color);
-      document.getElementById('secondaryColor').innerHTML = color;
-    }
-
-  </script> -->
-
   <app-root></app-root>
 
+  <script src="polyfills.js" defer></script>
+  <script src="main.js" defer></script>
 
 </body>
 
