@@ -89,6 +89,14 @@ export class PricingState {
       }),
       catchError((error) => {
 
+        console.log(state);
+
+        context.patchState({
+          pricingList: state.pricingList,
+          isLoading: false
+        });
+
+
         context.patchState({
           ...state,
           isLoading: false,
@@ -112,6 +120,15 @@ export class PricingState {
         }
       }),
       catchError((error) => {
+
+        console.log(state);
+
+        context.patchState({
+          pricingList: state.pricingList,
+          isLoading: false
+        });
+
+
         return this.store.dispatch(new Price.GetListFail(error))
       })
     );

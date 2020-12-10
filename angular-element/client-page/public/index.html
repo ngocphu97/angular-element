@@ -37,6 +37,8 @@
 
     <h2 class="mb-3">Pricing Element</h2>
 
+    <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+
     <div>
       <h4>Script</h4>
       <p> Place the following scripts near the end of your pages, right before the closing body tag, to enable them.</p>
@@ -53,6 +55,15 @@
           https://client-element.web.app/assets/js/3.js" defer</span><span
           class="text-primary">&gt;&lt;/script&gt;</span>
       </code>
+
+      or 
+
+      <code class="bg-light">
+        <span class="text-primary">&lt;script src="</span> <span
+          class="text-success">https://client-element.web.app/assets/js/sdk.js" defer</span><span
+          class="text-primary">&gt;&lt;/script&gt;</span>
+      </code>
+
     </div>
 
     <div class="mt-3">
@@ -69,10 +80,22 @@
     </div>
 
     <div class="mt-3">
+      <h4>Element Script</h4>
+      <code class="bg-light">
+        <span class="text-primary">&lt;micro-pricing</span> <span class="text-primary">&gt;&lt;/micro-pricing&gt;</span>
+      </code>
+
+      <p>If you want to use you specific config. Add config-data</p>
+
+      <code class="bg-light">
+        <span class="text-primary">&lt;micro-pricing</span> <span class="text-success">config-data="config"</span><span class="text-primary">&gt;&lt;/micro-pricing&gt;</span>
+      </code>
+    </div>
+
+    <div class="mt-3">
       <h4>Base tag</h4>
       <p>
-        The HTML
-        <base href="..." /> specifies a base path for resolving relative URLs to assets such as images, scripts, and
+        The HTML base specifies a base path for resolving relative URLs to assets such as images, scripts, and
         style sheets.
         <br> During navigation, the Angular router uses the base href as the base path to component, template, and
         module files.
@@ -116,17 +139,17 @@
               <div class="mt-3">
                 <div>
                   <label class="form-label"> Title </label>
-                  <input type="text" class="form-control" id="firstTitle">
+                  <input type="text" class="form-control" value="Standard" id="firstTitle">
                 </div>
 
                 <div>
                   <label class="form-label"> Price </label>
-                  <input type="text" class="form-control" id="firstPrice">
+                  <input type="text" class="form-control" value="0" id="firstPrice">
                 </div>
 
                 <div>
                   <label class="form-label"> Action Text </label>
-                  <input type="text" class="form-control" id="firstAction">
+                  <input type="text" class="form-control" value="Get Started" id="firstAction">
                 </div>
 
               </div>
@@ -137,17 +160,17 @@
               <div class="mt-3">
                 <div>
                   <label class="form-label"> Title </label>
-                  <input type="text" class="form-control" id="secondTitle">
+                  <input type="text" class="form-control"  value="Professional" id="secondTitle">
                 </div>
 
                 <div>
                   <label class="form-label"> Price </label>
-                  <input type="text" class="form-control" id="secondPrice">
+                  <input type="text" class="form-control" value="20" id="secondPrice">
                 </div>
 
                 <div>
                   <label class="form-label"> Action Text </label>
-                  <input type="text" class="form-control" id="secondAction">
+                  <input type="text" class="form-control" value="Get Started" id="secondAction">
                 </div>
 
               </div>
@@ -158,17 +181,17 @@
               <div class="mt-3">
                 <div>
                   <label class="form-label"> Title </label>
-                  <input type="text" class="form-control" id="thirdTitle">
+                  <input type="text" class="form-control" value="Premium"  id="thirdTitle">
                 </div>
 
                 <div>
                   <label class="form-label"> Price </label>
-                  <input type="text" class="form-control" id="thirdPrice">
+                  <input type="text" class="form-control" value="50" id="thirdPrice">
                 </div>
 
                 <div>
                   <label class="form-label"> Action Text </label>
-                  <input type="text" class="form-control" id="thirdAction">
+                  <input type="text" class="form-control" value="Get Started" id="thirdAction">
                 </div>
 
               </div>
@@ -188,9 +211,7 @@
       <micro-pricing id="microPricing" config-data="config"></micro-pricing>
     </main>
 
-    <script src="https://client-element.web.app/assets/js/polyfills.js" defer></script>
-    <script src="https://client-element.web.app/assets/js/main.js" defer></script>
-    <script src="https://client-element.web.app/assets/js/3.js" defer></script>
+    <script src="https://client-element.web.app/assets/js/sdk.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
@@ -210,7 +231,7 @@
               "Email support",
               "Help center access"
             ],
-            action: 'Premium'
+            action: 'Get Started'
           },
           {
             id: 2,
@@ -222,7 +243,7 @@
               "Email support",
               "Help center access"
             ],
-            action: 'Premium'
+            action: 'Get Started'
           },
           {
             id: 3,
@@ -234,7 +255,7 @@
               "Email support",
               "Help center access"
             ],
-            action: 'Premium'
+            action: 'Get Started'
           }
         ]
       }
@@ -243,27 +264,6 @@
         const jsonParse = JSON.stringify(config);
         document.getElementById('microPricing').setAttribute('config-data', jsonParse)
       };
-
-      function selectMainColor(color) {
-        config = {
-          ...config,
-          mainColor: color
-        }
-
-        console.log('config', config)
-        const jsonParse = JSON.stringify(config);
-        document.getElementById('microPricing').setAttribute('config-data', jsonParse);
-      }
-
-      function selectSecondaryColor(color) {
-        config = {
-          ...config,
-          secondaryColor: color
-        }
-
-        const jsonParse = JSON.stringify(config);
-        document.getElementById('microPricing').setAttribute('config-data', jsonParse);
-      }
 
       function applyConfig() {
         const firstTitle = document.getElementById('firstTitle').value;
@@ -310,11 +310,15 @@
         };
 
         const jsonParse = JSON.stringify(config);
+        console.log(jsonParse);
+        
         document.getElementById('microPricing').setAttribute('config-data', jsonParse);
       }
 
     </script>
-    
+
+    <!-- <script src="./client-page/assets/js/4.js"></script> -->
+
 </body>
 
 </html>
