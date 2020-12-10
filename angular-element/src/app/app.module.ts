@@ -1,25 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ApplicationRef, Injector, NgModule } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { createCustomElement } from '@angular/elements';
-
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { ApplicationRef, Injector, NgModule } from '@angular/core';
 
 import { NgxsModule } from '@ngxs/store';
 import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { MediaListComponent } from './list/media-list/media-list.component';
-import { ListState } from './list/store/list.state';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { PriceListComponent } from './price/containers/price-list/price-list.component';
 import { PriceElementComponent } from './price/price-element/price-element.component';
-import { Router } from '@angular/router';
 
 
 // set false when build

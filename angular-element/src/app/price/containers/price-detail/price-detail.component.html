@@ -8,7 +8,11 @@
       <ul class="list-unstyled mt-3 mb-4">
         <li *ngFor="let action of priceItem.detail"> {{ action }} </li>
       </ul>
-      <button class="btn btn-primary my-3" (click)="seeMoreDetail(priceItem)">See more</button>
+      <button class="btn btn-primary my-3" 
+        (click)="seeMoreDetail(priceItem)">
+        See more
+      </button>
+      
       <a type="button" class="w-100 btn btn-lg"   
         [routerLink]="['/price', { outlets : {price: ['checkout']} }]" 
         skipLocationChange

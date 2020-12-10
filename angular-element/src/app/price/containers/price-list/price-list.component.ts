@@ -20,12 +20,10 @@ export class PriceListComponent implements OnInit {
 
   constructor(private store: Store) { 
     this.store.dispatch(new Price.GetPriceList());
-    this.pricingList$.subscribe((pricingList) => {
-      this.priceList = pricingList
-    });
   }
 
   ngOnInit(): void {
+    this.store.dispatch(new Price.GetPriceList());
   }
 
   onSelectedPriceItem(id) {

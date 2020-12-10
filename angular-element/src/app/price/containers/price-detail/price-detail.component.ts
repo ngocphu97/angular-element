@@ -10,6 +10,9 @@ export class PriceDetailComponent implements OnInit {
 
 
   @Input() priceItem: PriceModel;
+  @Input() mainColor: string;
+  @Input() secondaryColor: string;
+
   @Output() selectedPriceItem = new EventEmitter();
 
   constructor() { }

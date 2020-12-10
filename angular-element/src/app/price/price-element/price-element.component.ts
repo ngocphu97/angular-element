@@ -10,21 +10,20 @@ import { Price } from '../store/price.action';
 export class PriceElementComponent implements OnInit {
 
   @Input()
-  get configData() {return this._configData;}
+  get configData() { return this._configData; }
   set configData(configData: any) {
-    this._configData =  JSON.parse(configData);
-    console.log("🚀 ~ file: pricing -> input", this._configData.pricing)
+    this._configData = JSON.parse(configData);
     this.store.dispatch(new Price.UpdateListWithConfig(this._configData.pricing));
   }
   private _configData: any;
 
-  constructor(private store: Store) {}
+  constructor(private store: Store) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes.configData) {
-      console.log("🚀 ~ file: pricing -> onchanges", this.configData.pricing)
+    if (changes.configData) {
+      console.log("🚀 ~ file: pricing -> onchanges", this.configData)
       this.store.dispatch(new Price.UpdateListWithConfig(this.configData.pricing));
     }
   }

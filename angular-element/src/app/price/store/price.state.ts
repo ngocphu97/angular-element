@@ -12,7 +12,44 @@ export interface PriceStateModel {
 
 const defaults: PriceStateModel = {
   isLoading: false,
-  pricingList: [],
+  pricingList: [
+    {
+      id: 1,
+      title: "free",
+      itemPrice: "0",
+      detail: [
+        "10 users included",
+        "2 GB of storage",
+        "Email support",
+        "Help center access"
+      ],
+      action: "Sign up for free"
+    },
+    {
+      id: 2,
+      title: "pro",
+      itemPrice: "15",
+      detail: [
+        "20 users included",
+        "10 GB of storage",
+        "Priority email support",
+        "Help center access"
+      ],
+      action: "Get started"
+    },
+    {
+      id: 3,
+      title: "enterprise",
+      itemPrice: "29",
+      detail: [
+        "30 users included",
+        "15 GB of storage",
+        "Phone and email support",
+        "Help center access"
+      ],
+      action: "Contact us"
+    }
+  ],
   pricingDetail: undefined
 };
 
@@ -28,9 +65,7 @@ export class PricingState {
   constructor(
     private service: PriceService,
     private store: Store
-  ) {
-    console.log('this.store', this.store);
-  }
+  ) {  }
 
   @Action(Price.GetPriceList)
   getList(context: StateContext<PriceStateModel>) {

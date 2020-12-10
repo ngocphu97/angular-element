@@ -10,12 +10,6 @@
 
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
-  <div class="d-flex justify-content-center" *ngIf="(isLoading$ | async)">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-
   <ng-container *ngFor="let priceItem of pricingList$ | async">
     <app-price-detail 
       (selectedPriceItem)="onSelectedPriceItem($event)"
